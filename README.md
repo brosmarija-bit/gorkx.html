@@ -1,3 +1,10 @@
+Licenca: CC BY-NC-ND 4.0
+Nekomercialna uporaba, brez predelav 😊
+Več: creativecommons.org", "gorkx"
+https://github.com/brosmarija-bit/gorkx.html
+https://gorkx.clan.su/
+https://x.com/bobi57610416
+https://www.facebook.com/profile.php?id=100015676143006
 # gorkx.html
 GORKX ⋆AI⋆ Pametni brezplačni slovenski napredni AI
 <meta charset="utf-8">

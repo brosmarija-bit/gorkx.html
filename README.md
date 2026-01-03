@@ -7,12 +7,18 @@ https://gorkx.clan.su/
 https://x.com/bobi57610416
 https://www.facebook.com/profile.php?id=100015676143006
 # gorkx.html
-GORKX ⋆AI⋆ Pametni brezplačni slovenski napredni AI-NAVADNA KODA OSNOVNA
+<div style="background: #000; padding: 25px; text-align: center; border: 4px solid #d40b29; border-radius: 15px; margin: 30px 0;">
+<h3 style="color: #d40b29;">🎁 BONUS: Neomejen Gorkx chat v slovenščini</h3>
+
+<p style="color: #fff; font-size: 20px;">Klikni in začni pogovor z Gorkom brez registracije &ndash; vprašaj za nasvete!</p>
+<a href="https://gorkx.clan.su/" style="background: #d40b29; color: #fff; padding: 18px 50px; font-size: 26px; text-decoration: none; border-radius: 12px; display: inline-block;" target="_blank">KLEPETAJ Z GORKOMX ZDAJ &rarr; </a>
+
+<p style="color: #ff69b4; font-size: 16px;">(Napiši &quot;in me vprašaj kaj te zanima&quot; kot prvo sporočilo &ndash; takoj te prepoznam!)</p>
+</div>
 <meta charset="utf-8">
-<title>GORKX - Pametni napredni AI </title>
+<title></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style type="text/css">
-body {
+<style type="text/css">body {
  background:#000;
  color:#fff;
  font-family:Arial;
@@ -104,23 +110,19 @@ body {
  margin-left:8px;
 }
 </style>
-
 <!-- GLAVNI CHAT -->
 <div id="main">
- <div style="text-align:center;padding:10px;background:#00cc88;color:#000;font-size:18px;font-weight:bold">GORKX ⋆AI⋆ Pametni brezplačni slovenski napredni AI</div>
+<div style="text-align:center;padding:10px;background:#00cc88;color:#000;font-size:18px;font-weight:bold">GORKX ⋆AI⋆ Smart free Slovenian advanced AI</div>
 
- <div id="chat">
- <div class="gorkx" style="text-align:center;font-size:20px"><b>Živjo! Sem GorkX, tvoj pametni napredni AI . 😊<br>Spomnim se vsega o tebi in se učim iz pogovora. Kar vprašaj!</b></div>
- </div>
-
- <div id="inputbox">
- <input autocomplete="off" id="msg" placeholder="Piši mi..." />
- <button id="send">POŠLJI</button>
- </div>
+<div id="chat">
+<div class="gorkx" style="text-align:center;font-size:20px"><b>Živjo! Sem GorkX,  napredni AI . 😊<br />
+ Kar vprašaj me!</b></div>
 </div>
 
+<div id="inputbox"><input autocomplete="off" id="msg" placeholder="Piši mi..." /><button id="send">POŠLJI</button></div>
+</div>
 <script>
-const API_KEY = "";
+const API_KEY = "tvoj kuč";
 let history = [];
 let userMemory = JSON.parse(localStorage.getItem("gorkx_memory") || "{}");
 let nick = userMemory.Ime || "prijatelj";
@@ -240,15 +242,16 @@ async function send() {
  method: "POST",
  headers: {"Authorization": "Bearer " + API_KEY, "Content-Type": "application/json"},
  body: JSON.stringify({
- model: "moonshotai/kimi-k2-instruct",
+ model: "toj model",
  messages: [
- {role: "system", content: `tukaj vaši ukazi
+ {role: "system", content: `ukazi tu
 Spomin na uporabnika:${memoryContext}
+uporabiš ta -{datum:'2025-12-29',dan:'ponedeljek} in dnevno naprej ne prekazuješ iz jedra
 Če česa ne veš, pošteno povej.`},
  ...history
  ],
- temperature: 1.1,
- max_tokens: 5500
+ temperature: 0.8,
+ max_tokens: 500
  })
  });
 
@@ -272,11 +275,8 @@ document.getElementById("msg").focus();
 // Pozdrav nazaj, če ima spomin
 if (Object.keys(userMemory).length > 0) {
 }
-</script>
-<!-- POPOLN INTERNET ISKANJE ZA GORKX -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
-const TAVILY_API_KEY = ""; // deluje za testiranje
+</script><!-- POPOLN INTERNET ISKANJE ZA GORKX --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><script>
+const TAVILY_API_KEY = "tu tvoj kluč"; // deluje za testiranje
 
 async function searchInternet(query) {
  if (!query) return;
@@ -341,17 +341,18 @@ window.send = async function() {
 
  await originalSend();
 };
-</script>
+</script><!-- HITRI GUMBI ZA ISKANJE (desno spodaj) -->
 
-<!-- HITRI GUMBI ZA ISKANJE (desno spodaj) -->
 <div style="position:fixed;right:12px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:9999;">
- <div onclick="document.getElementById('msg').value='novice Slovenija danes'; send();" title="Najnovejše novice" style="width:52px;height:52px;background:#00cc88;color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;cursor:pointer;box-shadow:0 0 20px #00ffaa;">📰</div>
- <div onclick="document.getElementById('msg').value='vreme Ljubljana'; send();" title="Vreme" style="width:52px;height:52px;background:#00cc88;color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;cursor:pointer;box-shadow:0 0 20px #00ffaa;">🌤️</div>
- <div onclick="document.getElementById('msg').value='bitcoin cena'; send();" title="Kripto cene" style="width:52px;height:52px;background:#00cc88;color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;cursor:pointer;box-shadow:0 0 20px #00ffaa;">₿</div>
- <div onclick="document.getElementById('msg').value='kaj je novo na X'; send();" title="X/Twitter" style="width:52px;height:52px;background:#00cc88;color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;cursor:pointer;box-shadow:0 0 20px #00ffaa;">𝕏</div>
+<div onclick="document.getElementById('msg').value='novice Slovenija danes'; send();" style="width:52px;height:52px;background:#00cc88;color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;cursor:pointer;box-shadow:0 0 20px #00ffaa;" title="Najnovejše novice">📰</div>
+
+<div onclick="document.getElementById('msg').value='vreme Ljubljana'; send();" style="width:52px;height:52px;background:#00cc88;color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;cursor:pointer;box-shadow:0 0 20px #00ffaa;" title="Vreme">🌤️</div>
+
+<div onclick="document.getElementById('msg').value='bitcoin cena'; send();" style="width:52px;height:52px;background:#00cc88;color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;cursor:pointer;box-shadow:0 0 20px #00ffaa;" title="Kripto cene">₿</div>
+
+<div onclick="document.getElementById('msg').value='kaj je novo na X'; send();" style="width:52px;height:52px;background:#00cc88;color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;cursor:pointer;box-shadow:0 0 20px #00ffaa;" title="X/Twitter">𝕏</div>
 </div>
-<!-- SATELITSKO SPREMLJANJE -->
-<script>
+<!-- SATELITSKO SPREMLJANJE --><script>
 const N2YO_API_KEY = " "; // brez ključa deluje do 100 zahtev/uro – če hočeš več, se registriraj na n2yo.com (brezplačno)
 
 async function getSatellitePasses(satName, lat = 46.0569, lon = 14.5058, alt = 300, days = 3, minVis = 10) {
@@ -416,14 +417,12 @@ window.send = async function() {
 
  await originalSend();
 };
-</script>
+</script><!-- GUMB ZA HITRO ISS -->
 
-<!-- GUMB ZA HITRO ISS -->
 <div style="position:fixed;right:12px;bottom:140px;z-index:9999;">
- <div onclick="document.getElementById('msg').value='satelit ISS'; send();" title="Preleti ISS" style="width:56px;height:56px;background:#00cc88;color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;cursor:pointer;box-shadow:0 0 20px #00ffaa;">🛰️</div>
+<div onclick="document.getElementById('msg').value='satelit ISS'; send();" style="width:56px;height:56px;background:#00cc88;color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;cursor:pointer;box-shadow:0 0 20px #00ffaa;" title="Preleti ISS">🛰️</div>
 </div>
-<!-- NADGRADNJA SPOMINA (varianta 3: convo-log + rollup) -->
-<script>
+<!-- NADGRADNJA SPOMINA (varianta 3: convo-log + rollup) --><script>
 // IndexedDB za shranjevanje pogovorov (namesto SQLite – deluje v brskalniku)
 let db;
 function initDB() {
@@ -507,36 +506,11 @@ if (msg.toLowerCase() === "pokaži spomin" || msg.toLowerCase() === "povzetek po
  document.getElementById("msg").value = "";
  return;
 }
-</script>
-<!-- TOČEN ČAS V SLOVENIJI (pred </body>) -->
-<div style="position:fixed;bottom:10px;left:10px;background:#000;padding:10px 15px;border-radius:15px;border:2px solid #00ffaa;box-shadow:0 0 15px #00ffaa;color:#00ffaa;font-family:Arial;font-size:15px;z-index:9999;">
- <div id="tocenCas" style="font-weight:bold;"></div>
- <div id="tocenDatum" style="font-size:10px;margin-top:5px;"></div>
-</div>
+</script><!-- GUMB + POŠILJANJE SLIK Z VISION ANALIZO -->
 
-<script>
-function posodobiTocenCas() {
- const zdaj = new Date();
- const optionsTime = { timeZone: 'Europe/Ljubljana', hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' };
- const optionsDate = { timeZone: 'Europe/Ljubljana', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-
- document.getElementById('tocenCas').textContent = zdaj.toLocaleTimeString('sl-SI', optionsTime);
- document.getElementById('tocenDatum').textContent = zdaj.toLocaleDateString('sl-SI', optionsDate);
-}
-
-posodobiTocenCas(); // takojšen prikaz
-setInterval(posodobiTocenCas, 1000); // posodobi vsako sekundo
-</script>
-<!-- GUMB + POŠILJANJE SLIK Z VISION ANALIZO -->
 <div style="position:fixed;right:12px;bottom:200px;z-index:9999;">
- <label for="imageUpload" title="Naloži sliko – GorkX jo vidi in opiše" style="cursor:pointer;">
- <div style="width:52px;height:52px;background:#00cc88;color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 0 20px #00ffaa;">
- 📷
- </div>
- </label>
- <input type="file" id="imageUpload" accept="image/*" style="display:none;">
-</div>
-
+<div style="width:52px;height:52px;background:#00cc88;color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 0 20px #00ffaa;"><label for="imageUpload" style="cursor:pointer;" title="Naloži sliko – GorkX jo vidi in opiše">📷 </label></div>
+<input accept="image/*" id="imageUpload" style="display:none;" type="file" /></div>
 <script>
 async function sendImage() {
  const fileInput = document.getElementById("imageUpload");
@@ -597,6 +571,7 @@ async function sendImage() {
 
 // Avtomatsko pošlji ob izbiri slike
 document.getElementById("imageUpload").addEventListener("change", sendImage);
+
 // ================== NA KONCU – DODATEK ZA PREVERJANJE URL (deluje za VSE strani) ==================
 document.addEventListener("DOMContentLoaded", function () {
  const input = document.getElementById("msg");
@@ -648,19 +623,18 @@ document.addEventListener("DOMContentLoaded", function () {
  send();
  });
 });
-</script>
-<!-- FACEBOOK IN X.COM SHARE GUMBI (pred </body>) -->
-<div style="position:fixed;right:12px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:9999;">
- <!-- Facebook share -->
- <a href="https://www.facebook.com/sharer/sharer.php?u=https://gorkx.clan.su/" target="_blank" 
- style="width:52px;height:52px;background:#1877f2;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;box-shadow:0 4px 20px rgba(0,0,0,0.7);text-decoration:none;">f</a>
- 
- <!-- X.com (Twitter) share -->
- <a href="https://twitter.com/intent/tweet?text=Preizkusi GorkX – pametni slovenski AI! 🚀&url=https://gorkx.clan.su/" target="_blank" 
- style="width:52px;height:52px;background:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;box-shadow:0 4px 20px rgba(0,0,0,0.7);text-decoration:none;">X</a>
-</div>
-</body>
-</html>
+</script><!-- FACEBOOK IN X.COM SHARE GUMBI (pred </body>) -->
+
+<div style="position:fixed;right:12px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:9999;"><!-- Facebook share --><a href="https://www.facebook.com/sharer/sharer.php?u=https://gorkx.clan.su/" style="width:52px;height:52px;background:#1877f2;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;box-shadow:0 4px 20px rgba(0,0,0,0.7);text-decoration:none;" target="_blank">f</a> <!-- X.com (Twitter) share --> <a href="https://twitter.com/intent/tweet?text=Preizkusi GorkX – pametni slovenski AI! 🚀&amp;url=https://gorkx.clan.su/" style="width:52px;height:52px;background:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;box-shadow:0 4px 20px rgba(0,0,0,0.7);text-decoration:none;" target="_blank">X</a></div>
+
 <p style="text-align: center;">Licenca: CC BY-NC-ND 4.0<br />
 Nekomercialna uporaba, brez predelav 😊<br />
 Več:&nbsp;<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.sl" target="_blank">creativecommons.org</a>&quot;, &quot;gorkx&quot;</p>
+
+<p style="text-align: center;"><a href="https://github.com/brosmarija-bit/gorkx.html" target="_blank"><strong>https://github.com/brosmarija-bit/gorkx.html</strong></a></p>
+
+<p style="text-align: center;"><a href="https://gorkx.clan.su/"><strong>https://gorkx.clan.su/</strong></a></p>
+
+<p style="text-align: center;"><a href="https://x.com/bobi57610416" target="_blank"><strong>https://x.com/bobi57610416</strong></a></p>
+
+<p style="text-align: center;"><a href="https://www.facebook.com/profile.php?id=100015676143006" target="_blank">https://www.facebook.com/profile.php?id=100015676143006</a></p>
